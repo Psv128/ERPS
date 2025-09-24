@@ -6,7 +6,11 @@ Usaremos la aplicación Virtual Box para crear nuestra máquina virtual.
 
 # Cambio de Idioma Del Teclado a Español
 
-Usaremos la aplicación Virtual Box para crear nuestra máquina virtual.
+El teclado por defecto
+
+# Instalación SSH
+
+Para la instalación de Odoo, necesitamos la función de copiar y pegar debido a lo largo que son los comandos.
 
 # Instalación Odoo
 
