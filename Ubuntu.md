@@ -11,10 +11,33 @@ Para arreglar esto, debemos introducir estos comandos para cambiar la distribuci
 
 `sudo dpkg-reconfigure keyboard-configuration`
 
+<img width="1007" height="750" alt="español1" src="https://github.com/user-attachments/assets/b6a79b38-20ad-4ae9-92f9-2c1c6feca9a0" />
+
+Aqui pondremos un teclado generico y seleccionaremos la distribución en Español.
+
+<img width="1009" height="754" alt="Captura de pantalla 2025-10-02 102633" src="https://github.com/user-attachments/assets/381cbd6c-95e2-4a3b-be15-8e0237d893c6" />
+
+Luego cambiar la distribución de las teclas especiales con este comando:
+
+`sudo dpkg-reconfigure locales`
+
+Aquí normalmente seguiriamos con la instalación del Odoo pero al haber comandos muy extensos instalaremos un SSH para poder copiar y pegar comandos desde la terminal anfitriona.
 
 # Instalación SSH
 
-Para la instalación de Odoo, necesitamos la función de copiar y pegar debido a lo largo que son los comandos.
+Para la instalación del SSH, emplearemos estos comandos:
+
+`sudo apt update`
+`sudo apt install openssh-server`
+`sudo systemctl status ssh`
+`sudo systemctl enable --now ssh`
+
+Y desde la maquina anfitriona , para poder establecer la conexión usaremos este comando:
+
+`sudo ssh "nombredelamaquinavirtual"@"ipdelamaquinavirtual` O en mi caso `sudo ssh "vboxuser"@"174.32.45.163`
+
+Y a partir de ahora cualquier comando que usemos en la terminal se ejecturará en la maquina virtual.
+Nos aseguraremos de que esta bien hecho si el nombre de la terminal cambia el nombre del equipo al de la maquina virtual
 
 # Instalación Odoo
 
