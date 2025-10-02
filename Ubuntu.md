@@ -6,7 +6,11 @@ Usaremos la aplicación Virtual Box para crear nuestra máquina virtual.
 
 # Cambio de Idioma Del Teclado a Español
 
-El teclado por defecto
+El teclado por defecto está establecido en inglés , por lo tanto al intentar introducir algunos caracteres especiales no se muestran como en el teclado.
+Para arreglar esto, debemos introducir estos comandos para cambiar la distribucion.
+
+`sudo dpkg-reconfigure keyboard-configuration`
+
 
 # Instalación SSH
 
