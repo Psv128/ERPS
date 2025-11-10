@@ -39,14 +39,14 @@ Y desde la maquina anfitriona , para poder establecer la conexión usaremos este
 Y a partir de ahora cualquier comando que usemos en la terminal se ejecturará en la maquina virtual.
 Nos aseguraremos de que esta bien hecho si el nombre de la terminal cambia el nombre del equipo al de la maquina virtual
 
-## 🧩 Instalación de Odoo
+##  Instalación de Odoo
 
 Para instalar Odoo de forma rápida, limpia y sin complicaciones, utilizaremos **Docker**.  
 Docker nos permite ejecutar aplicaciones en contenedores aislados, evitando conflictos de dependencias.
 
 ---
 
-## 🐳 Instalación de Docker
+##  Instalación de Docker
 
 Primero, actualizamos los paquetes e instalamos dependencias necesarias:
 
@@ -109,7 +109,7 @@ docker-compose --version
 
 ---
 
-## 🧱 Despliegue de Odoo con Docker Compose
+## Despliegue de Odoo con Docker Compose
 
 Creamos una carpeta para los archivos de Odoo:
 
@@ -152,13 +152,13 @@ volumes:
   odoo-db-data:
 ```
 
-> 📦 Este archivo define dos servicios:  
+ Este archivo define dos servicios:  
 > - `web`: contenedor de Odoo (puerto **8069**)  
 > - `db`: contenedor de PostgreSQL (base de datos de Odoo)
 
 ---
 
-## ▶️ Iniciar Odoo
+## Iniciar Odoo
 
 Ejecutamos el siguiente comando para iniciar los contenedores:
 
@@ -182,7 +182,7 @@ CONTAINER ID   IMAGE         COMMAND                  STATUS         PORTS
 
 ---
 
-## 🌐 Acceder a Odoo desde el Navegador
+## Acceder a Odoo desde el Navegador
 
 Desde la máquina anfitriona, abrimos un navegador y escribimos:
 
@@ -201,9 +201,9 @@ Creamos una base de datos nueva y establecemos una contraseña maestra (por ejem
 
 ---
 
-## 🚀 Primeros Pasos en Odoo
+## Primeros Pasos en Odoo
 
-### 🛍️ 1. Instalar el módulo de Ventas
+### 1. Instalar el módulo de Ventas
 
 1. En el panel principal, ir a **Aplicaciones**  
 2. Buscar **Ventas (Sales)**  
@@ -211,7 +211,7 @@ Creamos una base de datos nueva y establecemos una contraseña maestra (por ejem
 
 ---
 
-### 📦 2. Crear un Producto
+### 2. Crear un Producto
 
 1. Abrir el módulo **Ventas**  
 2. Ir a **Productos → Productos**  
@@ -224,7 +224,7 @@ Creamos una base de datos nueva y establecemos una contraseña maestra (por ejem
 
 ---
 
-### 🧾 3. Crear un Presupuesto
+### 3. Crear un Presupuesto
 
 1. En el módulo **Ventas**, seleccionar **Presupuestos → Crear**  
 2. Elegir un cliente (puedes crear uno nuevo)  
@@ -233,7 +233,7 @@ Creamos una base de datos nueva y establecemos una contraseña maestra (por ejem
 
 ---
 
-## 🧰 Gestión de Contenedores
+## Gestión de Contenedores
 
 Detener los contenedores:
 
