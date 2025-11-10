@@ -254,3 +254,39 @@ docker logs -f <nombre_del_contenedor_odoo>
 ```
 
 ---
+
+GZIP=-9 tar -czvf dockercompose.tar.gz dockercompose
+tar -cvf dockercompose.tar.gz --gzip -9 dockercompose
+
+sudo apt update
+sudo apt install git -y
+
+git config --global user.name "TuNombre"
+git config --global user.email "TuCorreo@ejemplo.com"
+
+sudo apt install git -y
+cd ~/odoo-docker
+git clone "enlace"
+git init
+git add odoo_backup.tar.gz docker-compose.yml
+git commit -m "Subida Odoo examen"
+git branch -M main
+git remote add origin https://github.com/usuario/odoo-examen.git
+git push -u origin main
+
+docker ps
+docker run -d --name nombre_contenedor imagen
+docker stop nombre_contenedor
+docker rm nombre_contenedor
+
+docker-compose up -d
+docker-compose down
+
+sudo apt update
+sudo apt install git -y
+git --version
+
+sudo apt update
+sudo apt install docker.io docker-compose -y
+
+tar -xzvf odoo_backup.tar.gz
