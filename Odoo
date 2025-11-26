@@ -1,4 +1,18 @@
 // Plantillas de Correo Electronico Automatico //
 
+Para crear plantillas de correo electronico dentro del odoo, debemos dirigirnos al apartado de opciones y nos dirigimos a ajustes.
+Dentro de ajustes , al final del todo tendremos una opción para habilitar las opciones de desarrollador.
+Una vez activadas podremos acceder a la opción "Plantillas de Correo Electronico" desde el apartado "Tecnico" del modo desarrollador.
+Dentro entrames en "Nuevo" para crear una plantilla personalizada con los siguientes apartados.
+
+Nombre: Aquí pondremos el nombre que querramos poner a la plantilla. (Sugerimos usar [Custom] para distinguir las plantillas normales de Odoo delas personalizadas.
+Aplica a: Aquí seleccionamos el proposito de la plantilla para poder cambiar los marcadores dinamicos.
+Asunto: El Titulo que tendrá el correo
+Contenido: Contenido del correo donde podremos colocar con la barra (/) para poder poner un marcador de posición dinamico para poder utilizar variables en el correo para utilizar cosas como los nombres , fechas
+Configuración y Ajustes:
+
+
+
+
 // Automatizar correos //
 -> Acciones de servidor (Modo Desarrollador)
