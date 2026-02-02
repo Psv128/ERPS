@@ -82,7 +82,7 @@ Se utilizan **acciones automatizadas** para que los correos se envíen al produc
 
 ## 2. Creación del sitio web
 
-![Ejemplo de editor de Odoo]([https://via.placeholder.com/600x300?text=Editor+Odoo](https://odoocdn.com/openerp_website/static/src/img/apps/website/hero_image.webp))
+![Ejemplo de editor de Odoo](https://odoocdn.com/openerp_website/static/src/img/apps/website/hero_image.webp)
 
 El editor visual permite usar **bloques drag & drop**: texto, imágenes, botones y productos. Se pueden personalizar colores, tipografía y diseño de la página.
 
@@ -192,7 +192,7 @@ class ProductoExtra(models.Model):
 
 Los módulos pueden modificar el sitio web añadiendo nuevas páginas, bloques o funcionalidades personalizadas. Esto se hace combinando XML, Python y **QWeb** para plantillas web.
 
-![Ejemplo de módulo personalizado en sitio web]([https://via.placeholder.com/600x300?text=M%C3%B3dulo+Web+Odoo](https://i.ytimg.com/vi/gPuAFqxpgng/hq720.jpg?sqp=-oaymwE7CK4FEIIDSFryq4qpAy0IARUAAAAAGAElAADIQj0AgKJD8AEB-AH-CYAC0AWKAgwIABABGE8gXShlMA8=&rs=AOn4CLDCWzxUSFoSE8iNTtEMInjDMeDfQQ))
+![Ejemplo de módulo personalizado en sitio web]((https://i.ytimg.com/vi/gPuAFqxpgng/hq720.jpg?sqp=-oaymwE7CK4FEIIDSFryq4qpAy0IARUAAAAAGAElAADIQj0AgKJD8AEB-AH-CYAC0AWKAgwIABABGE8gXShlMA8=&rs=AOn4CLDCWzxUSFoSE8iNTtEMInjDMeDfQQ))
 
 ---
 
