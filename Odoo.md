@@ -1,1 +1,281 @@
+# Memoria del Proyecto Odoo
+
+## Desarrollo de una Tienda Digital con Odoo y Creación de Módulos Personalizados
+
+---
+
+## Introducción
+
+Este documento recoge de forma detallada el trabajo realizado con **Odoo**, centrado en dos grandes pilares. Por un lado, el uso de la **aplicación Sitio Web y Comercio Electrónico** para la creación de una tienda digital completa. Por otro, el **desarrollo de módulos personalizados**, explicando cómo extender Odoo para añadir nuevas funcionalidades adaptadas a necesidades concretas.
+
+La memoria está pensada para ser leída desde **GitHub en formato Markdown**, por lo que se ha cuidado la estructura visual, los títulos, los bloques de código y la claridad del contenido. El objetivo no es solo explicar qué se ha hecho, sino también **cómo y por qué**, ofreciendo una visión realista del trabajo con Odoo a nivel práctico.
+
+---
+
+# PARTE I – Creación de una Tienda Digital con Odoo
+
+## 1. ¿Qué es Odoo y por qué usarlo para comercio electrónico?
+
+Odoo es un **ERP modular de código abierto** que permite gestionar múltiples áreas de un negocio desde una única plataforma. Entre sus muchas aplicaciones se encuentra **Sitio Web** y **Comercio Electrónico**, que permiten crear una tienda online sin necesidad de conocimientos avanzados de programación, pero con la posibilidad de personalización total si se desea.
+
+Las principales ventajas de usar Odoo para una tienda digital son:
+
+* Integración total con inventario, facturación y clientes
+* Editor visual muy intuitivo
+* Sistema modular ampliable mediante addons
+* Código abierto y altamente personalizable
+
+---
+
+## 2. Activación de las aplicaciones necesarias
+
+Para crear una tienda digital en Odoo es necesario activar varias aplicaciones:
+
+* **Sitio Web**: base para crear páginas web
+* **Comercio Electrónico**: añade funcionalidades de tienda online
+* **Inventario**: gestión de stock
+* **Facturación / Ventas**: gestión de pedidos y pagos
+
+Desde el panel principal de Odoo, se accede al **Apps Store** y se instalan estas aplicaciones. Una vez instaladas, Odoo queda preparado para funcionar como tienda online.
+
+---
+
+## 3. Creación y configuración del sitio web
+
+Al acceder a la aplicación **Sitio Web**, Odoo permite crear un sitio desde cero o utilizar una plantilla prediseñada. Estas plantillas son completamente editables y sirven como punto de partida.
+
+### Editor visual
+
+El editor visual de Odoo funciona mediante bloques. Cada bloque representa un componente visual:
+
+* Texto
+* Imágenes
+* Galerías
+* Botones
+* Listas de productos
+
+El sistema es completamente **drag & drop**, lo que facilita el diseño incluso a usuarios sin experiencia previa.
+
+### Personalización del diseño
+
+Desde el editor se pueden modificar:
+
+* Colores corporativos
+* Tipografías
+* Estructura de las páginas
+* Cabecera y pie de página
+
+Todo esto se aplica en tiempo real, permitiendo ver el resultado final mientras se edita.
+
+---
+
+## 4. Creación de productos
+
+La tienda digital gira en torno a los productos. Desde la aplicación **Ventas** o **Comercio Electrónico** se pueden crear productos con los siguientes datos:
+
+* Nombre
+* Precio
+* Imagen
+* Descripción
+* Categoría
+* Stock disponible
+
+Cada producto puede configurarse para ser visible en la tienda online mediante una simple opción.
+
+### Variantes de producto
+
+Odoo permite crear variantes, como por ejemplo:
+
+* Tallas
+* Colores
+* Materiales
+
+Esto resulta muy útil para tiendas de ropa, tecnología u otros sectores donde un producto puede tener múltiples combinaciones.
+
+---
+
+## 5. Gestión del carrito y proceso de compra
+
+Una vez los productos están publicados, Odoo gestiona automáticamente:
+
+* Carrito de compra
+* Proceso de checkout
+* Datos del cliente
+* Confirmación de pedidos
+
+El flujo de compra es claro y personalizable. Se pueden añadir pasos adicionales o modificar textos para adaptarlos al negocio.
+
+---
+
+## 6. Métodos de pago y envío
+
+Odoo permite configurar diferentes métodos de pago:
+
+* Transferencia bancaria
+* Pago contra reembolso
+* Pasarelas como Stripe o PayPal
+
+También se pueden definir métodos de envío con precios fijos o variables según peso, destino o importe del pedido.
+
+---
+
+## 7. Gestión de pedidos y clientes
+
+Desde el backend, el administrador puede:
+
+* Ver pedidos en tiempo real
+* Cambiar estados (presupuesto, confirmado, enviado, facturado)
+* Gestionar clientes
+* Consultar historial de compras
+
+Esto convierte a Odoo en una solución completa y centralizada.
+
+---
+
+# PARTE II – Desarrollo de Módulos Personalizados en Odoo
+
+## 1. ¿Qué es un módulo en Odoo?
+
+Un módulo en Odoo es un **paquete de funcionalidades** que extiende el sistema base. Gracias a los módulos, Odoo puede adaptarse a casi cualquier necesidad empresarial.
+
+Un módulo puede:
+
+* Añadir nuevos modelos de datos
+* Modificar vistas existentes
+* Añadir lógica personalizada
+* Integrarse con otras aplicaciones
+
+---
+
+## 2. Estructura básica de un módulo
+
+Un módulo de Odoo tiene una estructura muy definida:
+
+```
+mi_modulo/
+├── __manifest__.py
+├── __init__.py
+├── models/
+│   └── __init__.py
+├── views/
+│   └── vistas.xml
+├── security/
+│   └── ir.model.access.csv
+```
+
+Cada archivo cumple una función específica dentro del módulo.
+
+---
+
+## 3. Archivo manifest
+
+El archivo `__manifest__.py` define la información básica del módulo:
+
+* Nombre
+* Versión
+* Dependencias
+* Archivos que se cargan
+
+Ejemplo:
+
+```python
+{
+    'name': 'Modulo Tienda Personalizada',
+    'version': '1.0',
+    'depends': ['base', 'website_sale'],
+    'data': [
+        'views/vistas.xml',
+    ],
+}
+```
+
+---
+
+## 4. Creación de modelos
+
+Los modelos representan tablas en la base de datos. Se definen usando Python y el ORM de Odoo.
+
+Ejemplo de modelo:
+
+```python
+from odoo import models, fields
+
+class ProductoExtra(models.Model):
+    _name = 'producto.extra'
+
+    name = fields.Char(string='Nombre')
+    descripcion = fields.Text(string='Descripción')
+    activo = fields.Boolean(default=True)
+```
+
+Esto crea una nueva tabla en la base de datos y permite gestionarla desde Odoo.
+
+---
+
+## 5. Vistas y formularios
+
+Las vistas definen cómo se muestran los datos en el backend y frontend. Se crean en XML.
+
+Ejemplo de vista formulario:
+
+```xml
+<form string="Producto Extra">
+    <sheet>
+        <group>
+            <field name="name"/>
+            <field name="descripcion"/>
+            <field name="activo"/>
+        </group>
+    </sheet>
+</form>
+```
+
+---
+
+## 6. Seguridad y permisos
+
+Odoo utiliza un sistema de permisos basado en roles. En el archivo `ir.model.access.csv` se define quién puede:
+
+* Leer
+* Escribir
+* Crear
+* Eliminar
+
+Esto es fundamental para mantener la seguridad del sistema.
+
+---
+
+## 7. Extensión del sitio web
+
+Los módulos también pueden modificar el sitio web:
+
+* Añadir nuevas páginas
+* Insertar bloques personalizados
+* Cambiar el comportamiento de la tienda
+
+Esto se hace combinando XML, Python y QWeb (el sistema de plantillas de Odoo).
+
+---
+
+## 8. Implementación y pruebas
+
+Una vez creado el módulo:
+
+1. Se copia en la carpeta de addons
+2. Se actualiza la lista de aplicaciones
+3. Se instala el módulo
+
+Tras la instalación, se realizan pruebas para asegurar que todo funciona correctamente y no interfiere con otros módulos.
+
+---
+
+## Conclusión
+
+El trabajo con Odoo permite crear una **tienda digital profesional** sin necesidad de herramientas externas, y al mismo tiempo ofrece un entorno de desarrollo muy potente para crear módulos personalizados.
+
+Gracias a su arquitectura modular, Odoo se adapta tanto a pequeños proyectos como a soluciones empresariales complejas. Este proyecto demuestra cómo es posible combinar diseño visual, gestión empresarial y desarrollo técnico dentro de una única plataforma.
+
+---
+
+📌 *Este documento forma parte de la memoria del proyecto realizado con Odoo y está diseñado para su correcta visualización en GitHub.*
 
