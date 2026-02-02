@@ -200,4 +200,4 @@ Los módulos pueden modificar el sitio web añadiendo nuevas páginas, bloques o
 
 Odoo permite crear **tiendas digitales completas** y desarrollar **módulos personalizados**. Con las automatizaciones, plantillas de correo, flujo de compras y desarrollo modular, se logra una solución profesional, centralizada y adaptable a cualquier negocio.
 
-📌 *Esta memoria está optimizada para GitHub, incluyendo tablas, imágenes referenciadas y bloques visuales para una lectura más dinámica.*
+
