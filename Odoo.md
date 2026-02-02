@@ -192,7 +192,7 @@ class ProductoExtra(models.Model):
 
 Los módulos pueden modificar el sitio web añadiendo nuevas páginas, bloques o funcionalidades personalizadas. Esto se hace combinando XML, Python y **QWeb** para plantillas web.
 
-![Ejemplo de módulo personalizado en sitio web]((https://i.ytimg.com/vi/gPuAFqxpgng/hq720.jpg?sqp=-oaymwE7CK4FEIIDSFryq4qpAy0IARUAAAAAGAElAADIQj0AgKJD8AEB-AH-CYAC0AWKAgwIABABGE8gXShlMA8=&rs=AOn4CLDCWzxUSFoSE8iNTtEMInjDMeDfQQ))
+![Ejemplo de módulo personalizado en sitio web](https://i.ytimg.com/vi/gPuAFqxpgng/hq720.jpg?sqp=-oaymwE7CK4FEIIDSFryq4qpAy0IARUAAAAAGAElAADIQj0AgKJD8AEB-AH-CYAC0AWKAgwIABABGE8gXShlMA8=&rs=AOn4CLDCWzxUSFoSE8iNTtEMInjDMeDfQQ)
 
 ---
 
