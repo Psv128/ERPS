@@ -285,15 +285,3 @@ Una vez creado el módulo:
 3. Se instala el módulo
 
 Tras la instalación, se realizan pruebas para asegurar que todo funciona correctamente y no interfiere con otros módulos.
-
----
-
-## Conclusión
-
-El trabajo con Odoo permite crear una **tienda digital profesional** sin necesidad de herramientas externas, y al mismo tiempo ofrece un entorno de desarrollo muy potente para crear módulos personalizados.
-
-Gracias a su arquitectura modular, Odoo se adapta tanto a pequeños proyectos como a soluciones empresariales complejas. Este proyecto demuestra cómo es posible combinar diseño visual, gestión empresarial y desarrollo técnico dentro de una única plataforma.
-
----
-
-📌 *Este documento forma parte de la memoria del proyecto realizado con Odoo y está diseñado para su correcta visualización en GitHub.*
