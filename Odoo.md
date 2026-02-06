@@ -718,9 +718,3 @@ Pasos:
 - Backups de base de datos y filestore.
 
 ---
-
-## Conclusión
-
-Odoo permite crear tiendas digitales completas y desarrollar extensiones robustas. Con correos automatizados, plantillas, flujos de compras y desarrollo modular (modelos, vistas, controladores, seguridad y QWeb), se consigue una solución escalable y profesional.
-
-Este documento amplía y ejemplifica con código todas las áreas tratadas, sirviendo como base para evolucionar el proyecto según nuevas necesidades.
